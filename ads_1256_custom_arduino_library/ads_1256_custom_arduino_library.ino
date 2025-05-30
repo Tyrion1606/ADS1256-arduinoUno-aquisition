@@ -99,12 +99,12 @@ void loop() {
 //   Serial.print('\t');
 
 
-double value = 0;
-for (int i = 0; i <10; i++){
- value += read_Value();
-}
+ double value = 0;
+// for (int i = 0; i <10; i++){
+//  value += read_Value();
+// }
 
-
+value = read_Value();
 value /= 10.;
 value /= bitToVolt;
 
@@ -130,15 +130,15 @@ else{
 }
 */
 Serial.print(value, 6);
-  if (count < MAX-1) {
-    Serial.print(", ");         // separa por vírgula (ou outro separador à sua escolha)
-  }
-count++;
+//   if (count < MAX-1) {
+Serial.print(", ");         // separa por vírgula (ou outro separador à sua escolha)
+//   }
+// count++;
 
-if (count >= MAX) {
-  Serial.println();
-  count = 0;
-  delay(1000000000);   // armazena e incrementa o índice
-} 
-delay(10);
+// if (count >= MAX) {
+//   Serial.println();
+//   count = 0;
+//   delay(1000000000);   // armazena e incrementa o índice
+// } 
+// delay(10);
 }
